@@ -13,7 +13,7 @@ def server = {
     import java.io._
     import scala.io._
 
-    val server = new ServerSocket(1123,1, InetAddress.getByName("localhost"))
+    val server = new ServerSocket(1234,1, InetAddress.getByName("localhost"))
 
     while (true) {
       val s = server.accept()
@@ -45,7 +45,7 @@ def client = {
 //  import org.apache.commons.io.FileUtils._
 
   println(InetAddress.getByName("localhost"))
-  val s = new Socket("127.0.0.1", 1123)
+  val s = new Socket("127.0.1.1", 1234)
   val in = s.getInputStream()
   val out = new PrintStream(s.getOutputStream())
   out.println("First Test Record ========================================================")

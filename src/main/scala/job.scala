@@ -24,7 +24,7 @@ object weld {
 
     val sparkConf = new SparkConf()
       .setSparkHome("/home/ram/dev/spark-1.6.1-bin-hadoop2.6")
-      .setMaster("spark://ram-Gazelle:7077")
+      .setMaster("spark://localhost:7077")
       .setAppName("weld")
       .set("spark.executor.memory", "1g")
       .set("spark.executor.instances", "8")
@@ -35,7 +35,7 @@ object weld {
 
 
     val ipAddress = "127.0.0.1"
-    val ipPort = "1123"
+    val ipPort = "1234"
     println("    =========>  IP:" + ipAddress + "Port:" + ipPort)
 
     val lines = ssc.socketTextStream(ipAddress, ipPort.toInt, StorageLevel.MEMORY_AND_DISK_SER)
